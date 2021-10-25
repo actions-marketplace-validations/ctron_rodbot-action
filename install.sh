@@ -22,4 +22,8 @@ if [ ! -x "$DIR/rodbot" ]; then
             exit 1
             ;;
     esac
+
+    "$DIR/rodbot" --version
+
+    echo "$DIR" >> "$GITHUB_PATH"
 fi
