@@ -3,6 +3,7 @@ description: "A bot for GitHub actions events"
 author: "Jens Reimann <jreimann@redhat.com>"
 branding:
   color: green
+  icon: activity
 inputs:
   version:
     description: "The version to use"
