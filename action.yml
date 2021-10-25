@@ -1,0 +1,24 @@
+name: "RodBot"
+description: "A bot for GitHub actions events"
+author: "Jens Reimann <jreimann@redhat.com>"
+branding:
+  color: green
+inputs:
+  version:
+    description: "The version to use"
+    required: true
+    default: "v0.1.1"
+  installOnly:
+    description: "Set to 'true' to only install the binary"
+    required: false
+    default: "false"
+runs:
+  using: composite
+  steps:
+    - run: "env VERSION=${{ inputs.version }} $GITHUB_ACTION_PATH/install.sh"
+      shell: bash
+    - run: |
+        if [ "${{ inputs.installOnly }}" != "true" ]; then
+          rodbot
+        fi
+      shell: bash
