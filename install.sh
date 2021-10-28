@@ -6,7 +6,7 @@ set -o pipefail
 
 ARCH=$(uname -m)
 DIR="$RUNNER_TOOL_CACHE/rodbot/$VERSION/$ARCH"
-: "${VERSION:=0.1.5}"
+: "${VERSION:=0.1.6}"
 
 mkdir -p "$DIR"
 
