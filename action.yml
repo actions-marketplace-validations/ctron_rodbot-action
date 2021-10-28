@@ -8,7 +8,7 @@ inputs:
   version:
     description: "The version to use"
     required: true
-    default: "v0.1.4"
+    default: "v0.1.5"
   installOnly:
     description: "Set to 'true' to only install the binary"
     required: false
